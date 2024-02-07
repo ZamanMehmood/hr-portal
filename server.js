@@ -9,7 +9,7 @@ const bodyParser = require("body-parser"); // parse the body of request
 const bcrypt = require("bcrypt"); // bcrypt provides securuty
 const { port } = require("./config/vars");
 const saltRounds = 10; // 2^10 iterations
-
+    
 async function generateResetPasswordSalt() {
   const secretKey = await bcrypt.genSalt(saltRounds);
   console.log("secretKey -=-=-=>", secretKey); // create string for RESET_PASSWORD
